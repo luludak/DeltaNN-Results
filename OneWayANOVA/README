@@ -1,0 +1,33 @@
+These are the results from our one-way ANOVA analysis.
+Due to a script bug, some duplicate results are introduced - without affecting our analysis.
+
+Legend:
+--------
+
+Device IDs:
+sovu: Server
+local: Local
+hikey: Hikey
+xavier: Xavier
+
+
+Optimization IDs:
+opt0: Basic Optimization
+opt2: Default Optimization
+opt4: Extended Optimization
+
+DL Framework IDs:
+tflite: TFLite
+pb_tf: TensorFlow
+keras: Keras
+torch: PyTorch
+
+Files:
+For our settings, we consider DL frameworks, Optimizations and Devices.
+In order to analyze, we "freeze" two of these parameters, and consider a configuration pair altering on the third parameter.
+
+Each file name, follows the convention:
+<Frozen Parameter 1>_output_stats_<part>.csv
+And contains (row structure):
+<Frozen Parameter 2>, <Parameter 3, Variant 1>, Parameter 3, Variant 2>, p-value, F-statistic.
+
